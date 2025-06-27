@@ -1,15 +1,14 @@
 import { Navigate } from "react-router";
-import { useAuth } from "./AuthContext"
+import { useAuth } from "./AuthContext";
 
+const AuthGuard = ({ children }) => {
+  const { currentUser } = useAuth();
 
-const AuthGuard = ({children}) =>{
-    const {currentUser} = useAuth();
+  if (!currentUser) {
+    return <Navigate to="/" />;
+  } else {
+    return children;
+  }
+};
 
-    if(!currentUser){
-        return <Navigate to='/login'/>
-    }else{
-        return children;
-    }
-}
-
-export default AuthGuard
+export default AuthGuard;
