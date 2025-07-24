@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,7 +44,7 @@
   color: #888;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 31px;
@@ -52,45 +55,167 @@
   color: white;
 }
 
-.header ul{
+.header ul {
   display: flex;
   gap: 3rem;
 }
 
-.header ul li{
+.header ul li {
   text-decoration: none;
   list-style: none;
 }
 
-.header h1{
+.header h1 {
   font-size: 20px;
 }
 
-/* signup  */
-.form{
+.movie {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:all 0.3s ease;
+}
+
+.movie:hover{
+box-shadow:
+    0 0 40px rgba(144, 36, 245, 0.5),
+    0 0 60px rgba(138, 43, 226, 0.3);
+}
+
+.movie img {
+  width: 100%;
+  height: 70%;
+  /* object-fit: cover; */
+}
+
+.movie-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.movie-list-page {
+  padding: 0 15px;
+  ;
+}
+
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.pagination {
+  display: flex;
+  ;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+
+.pagination button.active {
+  background-color: blueviolet;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 10px 50px;
+}
+
+.container .left-section {
+  width: 40%;
+  display: flex;
+
+}
+
+.container .right-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.container .right-section table {
+  width: 100%;
+  ;
+}
+
+.container .right-section input {
+  height: 20%;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+
+.genere-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  ;
-  width: 200%;
-}
-.form input{
-  height: 3rem;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-}
-.form button{
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 20px;;
-}
-.form div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+.genere {
+  height: 20%;
+  width: 400%;
+  padding: 10px 5px;
+  background-color: #646cff;
+  color: white;
+  font-size: bold;
+}
+
+.movie-info {
+  flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.movie-info h4{
+  margin: 5px 5px;
+  text-align: center;
+    font-size: 17px;
+    /* overflow: hidden; */
+  
+}
+.movie-info button{
+  margin:0 4px;
+  align-self: flex-center;
+}
+
+.buttonText {
+  font-weight: bold;
+}
+
+tr td{
+  text-align: center;
+  font-size: 17px;
+}
+.imageCover{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.imageCover img{
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover;
+  display: block; */
+}
+
+table {
+  border: 2px solid #646cff;
+  border-collapse: collapse;
+}
+
+input{
+  font-size: 17px;
+    background: 646cff;
+    border: 2px solid #646cff;
+    max-height: 20px;
+}

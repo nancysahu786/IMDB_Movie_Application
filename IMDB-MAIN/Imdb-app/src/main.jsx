@@ -1,12 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { Provider } from "react-redux";
+import { store } from "./store/store.js";
+import { AuthProvider } from "./AuthContext.jsx";
 
-import { AuthProvider } from './AuthContext.jsx'
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   // <BrowserRouter>
   //   <StrictMode>
   //     {/* <App /> */}
@@ -36,7 +36,7 @@ createRoot(document.getElementById('root')).render(
   // </BrowserRouter>
 
   // <StrictMode>
-  //     <App /> 
+  //     <App />
   // </StrictMode>
 
   // <BrowserRouter>
@@ -52,9 +52,9 @@ createRoot(document.getElementById('root')).render(
 
   <StrictMode>
     <AuthProvider>
-    <App />
-  </AuthProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </AuthProvider>
   </StrictMode>
-  
-
-)
+);
