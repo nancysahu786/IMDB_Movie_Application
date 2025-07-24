@@ -8,7 +8,7 @@ import WatchListPage from "./pages/WatchListPage";
 
 import Login from "./components/Login";
 import Header from "./components/Header";
-import AuthGuard from "./AuthGuard";
+// import AuthGuard from "./AuthGuard";
 import MovieListPage from "./pages/MovieListPage";
 function App() {
   const [count, setCount] = useState(0);
@@ -25,26 +25,26 @@ function App() {
           <Route
             path="watchlist"
             element={
-              <AuthGuard>
-                <WatchListPage />
-              </AuthGuard>
+              // <AuthGuard>
+              <WatchListPage />
+              // </AuthGuard>
             }
           />
 
           <Route
             path="/"
             element={
-              <AuthGuard>
-                <MovieListPage />
-              </AuthGuard>
+              // <AuthGuard>
+              <MovieListPage />
+              // </AuthGuard>
             }
           />
           <Route
             path="/movieList"
             element={
-              <AuthGuard>
-                <MovieListPage />
-              </AuthGuard>
+              // <AuthGuard>
+              <MovieListPage />
+              // </AuthGuard>
             }
           />
           <Route path="*" element={<h1>Page not found </h1>} />

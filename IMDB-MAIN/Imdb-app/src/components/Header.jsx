@@ -1,9 +1,9 @@
 import { Link, Navigate } from "react-router";
-import { useAuth } from "../AuthContext";
+// import { useAuth } from "../AuthContext";
 import "../App.css";
 const Header = () => {
-  const { currentUser } = useAuth();
-  console.log("current user", currentUser);
+  //   const { currentUser } = useAuth();
+  //   console.log("current user", currentUser);
 
   // if(!currentUser){
   //     return <Navigate to='/login' replace/>
